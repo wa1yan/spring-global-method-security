@@ -24,21 +24,21 @@ public class EmployeesController {
     private EmployeesDao employeesDao;
 
 
-    @PreAuthorize("hasRole(ROLE_EMPLOYEES_READ)")
+    @PreAuthorize("hasRole('ROLE_EMPLOYEES_READ')")
     @GetMapping("/employees")
     public ModelAndView index(){
         return new ModelAndView("employees","employees",employeesDao.findAll());
     }
 
 
-    @PreAuthorize("hasRole(ROLE_EMPLOYEES_CREATE)")
+    @PreAuthorize("hasRole('ROLE_EMPLOYEES_CREATE')")
     @GetMapping("/employees/create")
     public ModelAndView create(){
         return new ModelAndView("employees-create","employee",new Employee());
     }
 
 
-    @PreAuthorize("hasRole(ROLE_EMPLOYEES_CREATE)")
+    @PreAuthorize("hasRole('ROLE_EMPLOYEES_CREATE')")
     @PostMapping("/employees/create")
     public String create(@ModelAttribute @Valid Employee employee, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
