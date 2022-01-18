@@ -53,7 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .withUser("april")
                 .password(encoder.encode("april"))
-                .roles(DEPARTMENTS_PAG_VIEW,DEPARTMENTS_READ,DEPARTMENTS_CREATE)
+                .roles(EMPLOYEES_READ,DEPARTMENTS_PAG_VIEW,DEPARTMENTS_READ,DEPARTMENTS_CREATE)
                 .and()
                 .withUser("may")
                 .password(encoder.encode("may"))

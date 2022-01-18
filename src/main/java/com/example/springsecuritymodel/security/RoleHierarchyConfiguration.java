@@ -36,6 +36,7 @@ public class RoleHierarchyConfiguration {
                         .append(DEPARTMENTS_ADMIN,DEPARTMENTS_READ)
                         .append(DEPARTMENTS_ADMIN,DEPARTMENTS_DELETE)
                         .append(DEPARTMENTS_ADMIN,DEPARTMENTS_PAG_VIEW)
+                       // .append(DEPARTMENTS_ADMIN,EMPLOYEES_PAG_VIEW)
                         .build()
 
         );
