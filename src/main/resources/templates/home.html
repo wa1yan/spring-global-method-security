@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{layouts/main :: layout(~{::main})}" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<main role="main">
+  <div class="jumbotron">
+    <div class="container">
+      <h3 class="display-3">Welcome to Spring Security Example</h3>
+      <p>This is a homepage accessible to everyone.</p>
+      <p>User menu above to navigate to protected resources.</p>
+      <div th:replace="fragments/account-list :: account-list"></div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
