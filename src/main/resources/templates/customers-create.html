@@ -7,6 +7,10 @@
         <div class="row">
             <div class="col-md-12 py-5">
                 <h2>Add Customers</h2>
+                <a href="#" th:href="@{'/customer/create?lang=us'}">US</a> |
+                <a href="#" th:href="@{'/customer/create?lang=de'}">German</a> |
+                <a href="#" th:href="@{'/customer/create?lang=fr'}">French</a> |
+                <a href="#" th:href="@{'/customer/create?lang=ja'}">Japan</a>
                 <form th:replace="fragments/customerForm :: customerForm"></form>
             </div>
         </div>
